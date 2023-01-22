@@ -27,17 +27,25 @@ function techForms() {
   textDiv.setAttribute("class", "text");
 
   const text = textDiv.appendChild(document.createElement("p"));
+  text.setAttribute("class", "hero-text")
   const subText = textDiv.appendChild(document.createElement("p"));
+  subText.setAttribute("class", "hero-sub-text")
 
   // middle
   const middle = right.appendChild(document.createElement("div"));
   middle.setAttribute("class", "middle");
 
+  const formTitle = middle.appendChild(document.createElement("div"))
+  formTitle.setAttribute("class", "form-title");
+
+  const formText = formTitle.appendChild(document.createElement("h3"));
+  formText.setAttribute("class", "form-text");
+  formText.textContent = "Join the Two-Wheel Revolution!"
+
   const form = middle.appendChild(document.createElement("form"));
-  form.setAttribute("action", "POST");
+  form.setAttribute("action", "GET");
 
   // Name Fieldset
-
   const nameInput = form.appendChild(document.createElement("fieldset"));
   nameInput.setAttribute("class", "name-field");
 
@@ -48,6 +56,7 @@ function techForms() {
   const first = nameInput.appendChild(document.createElement("input"));
   first.setAttribute("type", "text");
   first.setAttribute("placeholder", "First Name");
+  first.setAttribute("autocomplete", "username")
 
   const secondLabel = nameInput.appendChild(document.createElement("label"));
   secondLabel.setAttribute("for", "first-name");
@@ -95,13 +104,18 @@ function techForms() {
     confirmLabel.setAttribute("for", "confirm-password");
     confirmLabel.textContent = "Confirm Password";
 
-    const confrim = passwordInput.appendChild(document.createElement("input"));
-    confrim.setAttribute("type", "text");
-    confirm.setAttribute("placeholder", "current");
+    const confirm = passwordInput.appendChild(document.createElement("input"));
+    confirm.setAttribute("type", "text");
+    confirm.setAttribute("autocomplete", "current-password");
 
-  // password
-  // password conf
-  // bottom
+    const submit =  form.appendChild(document.createElement("button"));
+    submit.setAttribute("value", "submit")
+    submit.textContent = "Create Account"
+
+
+
+
+
 
   // submit
   // login

@@ -1,0 +1,42 @@
+:root{
+    --hero-width: 45vh;
+    --hero-height: 60vh;
+    --techForms-height: 100vh;
+    --techForms-width: 100vw;
+    
+}
+
+
+.tech-forms {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.hero {
+    background-image: url(../assets/motorcycle.jpeg);
+    background-position: center;
+    background-size: cover;
+    width: 45vw;
+    height: 60vh;
+}
+
+.logo-div {
+background-color: rgba(0,0,0,.5);
+height: calc(var(--hero-height) / 4);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.logo{
+    height: calc(var(--hero-height) / 4);
+
+}
+
+.right{
+    height: var(--hero-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
