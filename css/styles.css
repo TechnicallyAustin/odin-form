@@ -1,5 +1,5 @@
 :root {
-    --hero-width: 35vw;
+    --hero-width: 50vw;
     --hero-height: 70vh;
     --techForms-height: 100vh;
     --techForms-width: 100vw;
@@ -40,7 +40,7 @@
 
 }
 
-.logo-container {}
+
 
 .logo {
     height: calc(var(--hero-height) / 10);
@@ -58,7 +58,6 @@
 
 .middle {
     display: flex;
-    height: 30vh;
 }
 
 .moto-form {
@@ -66,20 +65,49 @@
     width: var(--forms-width);
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: flex-start;
-    gap: 8%;
+    gap: 6%;
+}
+
+.legend-div{
+    height: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 2%;
 }
 
 fieldset {
     height: 6vh;
     width: 50vw;
-    gap: 4%;
+    gap: 15%;
     display: flex;
 }
 
 .form-inputs {
     height: 4vh;
+    width: 18vw;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4%;
+}
+
+.submit-div{
+    position: fixed;
+    top: 68vh;
+    left: 52vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 20vw;
+}
+
+button{
+    width: 16vw;
+    height: 3vh;
+    border-radius: 5px;
 }

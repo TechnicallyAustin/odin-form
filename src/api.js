@@ -43,7 +43,10 @@ function techForms() {
   form.setAttribute("action", "GET");
   form.setAttribute("class", "moto-form")
 
-  const legend = form.appendChild(document.createElement("legend"));
+  const legendDiv = form.appendChild(document.createElement("div"));
+  legendDiv.setAttribute("class", "legend-div")
+
+  const legend = legendDiv.appendChild(document.createElement("legend"));
   legend.setAttribute("class", "legend");
   legend.textContent = "Join the Two-Wheel Revolution"
 
@@ -131,11 +134,14 @@ function techForms() {
     confirm.setAttribute("type", "text");
     confirm.setAttribute("autocomplete", "current-password");
 
-    const submit =  form.appendChild(document.createElement("button"));
+    const submitDiv = form.appendChild(document.createElement("div"));
+    submitDiv.setAttribute("class", "submit-div");
+
+    const submit =  submitDiv.appendChild(document.createElement("button"));
     submit.setAttribute("value", "submit")
     submit.textContent = "Create Account"
 
-    const login = form.appendChild(document.createElement("p"));
+    const login = submitDiv.appendChild(document.createElement("p"));
     login.setAttribute("class", "login")
     login.textContent = "Already have an account? Login"
     
