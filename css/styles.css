@@ -1,9 +1,14 @@
-:root{
-    --hero-width: 45vh;
-    --hero-height: 60vh;
+:root {
+    --hero-width: 35vw;
+    --hero-height: 70vh;
     --techForms-height: 100vh;
     --techForms-width: 100vw;
-    
+    --forms-width: 50vw
+}
+
+* {
+    box-sizing: border-box;
+    border: 1px solid black;
 }
 
 
@@ -11,32 +16,70 @@
     display: flex;
     height: 100vh;
     width: 100vw;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero {
     background-image: url(../assets/motorcycle.jpeg);
     background-position: center;
     background-size: cover;
-    width: 45vw;
-    height: 60vh;
+    width: var(--hero-width);
+    height: var(--hero-height);
 }
 
 .logo-div {
-background-color: rgba(0,0,0,.5);
-height: calc(var(--hero-height) / 4);
-display: flex;
-justify-content: center;
-align-items: center;
+    height: 8vh;
+    width: var(--hero-width);
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 28vh;
+
 }
 
-.logo{
-    height: calc(var(--hero-height) / 4);
+.logo-container {}
 
+.logo {
+    height: calc(var(--hero-height) / 10);
+    width: auto;
+    padding: 3%;
 }
 
-.right{
+.right {
     height: var(--hero-height);
     display: flex;
     justify-content: center;
     align-items: center;
+
+}
+
+.middle {
+    display: flex;
+    height: 30vh;
+}
+
+.moto-form {
+    height: 30vh;
+    width: var(--forms-width);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8%;
+}
+
+fieldset {
+    height: 6vh;
+    width: 50vw;
+    gap: 4%;
+    display: flex;
+}
+
+.form-inputs {
+    height: 4vh;
+    display: flex;
+    flex-direction: column;
 }

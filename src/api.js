@@ -10,7 +10,10 @@ function techForms() {
   const logoDiv = left.appendChild(document.createElement("div"));
   logoDiv.setAttribute("class", "logo-div");
 
-  const logo = logoDiv.appendChild(document.createElement("img"));
+  const logoContainer = logoDiv.appendChild(document.createElement("div"))
+  logoContainer.setAttribute("class", "logo-container");
+
+  const logo = logoContainer.appendChild(document.createElement("img"));
   logo.setAttribute("class", "logo");
   logo.setAttribute("src", "assets/odin-lined.png");
 
@@ -35,76 +38,96 @@ function techForms() {
   const middle = right.appendChild(document.createElement("div"));
   middle.setAttribute("class", "middle");
 
-  const formTitle = middle.appendChild(document.createElement("div"))
-  formTitle.setAttribute("class", "form-title");
-
-  const formText = formTitle.appendChild(document.createElement("h3"));
-  formText.setAttribute("class", "form-text");
-  formText.textContent = "Join the Two-Wheel Revolution!"
-
+    // Form
   const form = middle.appendChild(document.createElement("form"));
   form.setAttribute("action", "GET");
+  form.setAttribute("class", "moto-form")
 
-  // Name Fieldset
+  const legend = form.appendChild(document.createElement("legend"));
+  legend.setAttribute("class", "legend");
+  legend.textContent = "Join the Two-Wheel Revolution"
+
+    // Name Fieldset
+
+
   const nameInput = form.appendChild(document.createElement("fieldset"));
   nameInput.setAttribute("class", "name-field");
 
-  const firstLabel = nameInput.appendChild(document.createElement("label"));
+   const firstNameDiv = nameInput.appendChild(document.createElement("div"));
+   firstNameDiv.setAttribute("class", "form-inputs");
+
+  const firstLabel = firstNameDiv.appendChild(document.createElement("label"));
   firstLabel.setAttribute("for", "first-name");
   firstLabel.textContent = "First Name";
 
-  const first = nameInput.appendChild(document.createElement("input"));
+  const first = firstNameDiv.appendChild(document.createElement("input"));
   first.setAttribute("type", "text");
   first.setAttribute("placeholder", "First Name");
   first.setAttribute("autocomplete", "username")
 
-  const secondLabel = nameInput.appendChild(document.createElement("label"));
+  const lastNameDiv = nameInput.appendChild(document.createElement("div"));
+  lastNameDiv.setAttribute("class", "form-inputs");
+
+  const secondLabel = lastNameDiv.appendChild(document.createElement("label"));
   secondLabel.setAttribute("for", "first-name");
   secondLabel.textContent = "Last Name";
 
-  const second = nameInput.appendChild(document.createElement("input"));
+  const second = lastNameDiv.appendChild(document.createElement("input"));
   second.setAttribute("type", "text");
   second.setAttribute("placeholder", "Last Name");
 
-  // Contact Fieldset
+    // Contact Fieldset
   const contactInput = form.appendChild(document.createElement("fieldset"));
   contactInput.setAttribute("class", "contact-field");
 
-  // email
-  const emailLabel = contactInput.appendChild(document.createElement("label"));
+  const emailDiv = contactInput.appendChild(document.createElement("div"));
+  emailDiv.setAttribute("class", "form-inputs");
+
+    // email
+  const emailLabel = emailDiv.appendChild(document.createElement("label"));
   emailLabel.setAttribute("for", "email");
   emailLabel.textContent = "Email";
 
-  const email = emailLabel.appendChild(document.createElement("input"));
+  const email = emailDiv.appendChild(document.createElement("input"));
   email.setAttribute("type", "email");
   email.setAttribute("placeholder", "name@domain.com");
 
-  // phone
-  const phoneLabel = contactInput.appendChild(document.createElement("label"));
-  phoneLabel.setAttribute("for", "phone-number");
-  phoneLabel.textContent = "Last Name";
+    // phone
 
-  const phone = contactInput.appendChild(document.createElement("input"));
+  const phoneDiv = contactInput.appendChild(document.createElement("div"))
+  phoneDiv.setAttribute("class", "form-inputs");
+
+  const phoneLabel = phoneDiv.appendChild(document.createElement("label"));
+  phoneLabel.setAttribute("for", "phone-number");
+  phoneLabel.textContent = "Phone Number";
+
+  const phone = phoneDiv.appendChild(document.createElement("input"));
   phone.setAttribute("type", "text");
   phone.setAttribute("placeholder", "(123)-456-7890");
 
-  // Password fieldset
+    // Password fieldset
     const passwordInput = form.appendChild(document.createElement("fieldset"));
-    passwordInput.setAttribute("class", "name-field");
+    passwordInput.setAttribute("class", "password-field");
 
-    const passwordLabel = passwordInput.appendChild(document.createElement("label"));
+    const passwordDiv = passwordInput.appendChild(document.createElement("div"));
+    passwordDiv.setAttribute("class", "form-inputs");
+
+    const passwordLabel = passwordDiv.appendChild(document.createElement("label"));
     passwordLabel.setAttribute("for", "password");
     passwordLabel.textContent = "Password";
 
-    const password = passwordInput.appendChild(document.createElement("input"));
+    const password = passwordDiv.appendChild(document.createElement("input"));
     password.setAttribute("type", "password");
     password.setAttribute("autocomplete", "current-password");
 
-    const confirmLabel = passwordInput.appendChild(document.createElement("label"));
+    const confrimDiv = passwordInput.appendChild(document.createElement("div"))
+    confrimDiv.setAttribute("class", "form-inputs");
+
+    const confirmLabel = confrimDiv.appendChild(document.createElement("label"));
     confirmLabel.setAttribute("for", "confirm-password");
     confirmLabel.textContent = "Confirm Password";
 
-    const confirm = passwordInput.appendChild(document.createElement("input"));
+    const confirm = confrimDiv.appendChild(document.createElement("input"));
     confirm.setAttribute("type", "text");
     confirm.setAttribute("autocomplete", "current-password");
 
@@ -112,6 +135,10 @@ function techForms() {
     submit.setAttribute("value", "submit")
     submit.textContent = "Create Account"
 
+    const login = form.appendChild(document.createElement("p"));
+    login.setAttribute("class", "login")
+    login.textContent = "Already have an account? Login"
+    
 
 
 
