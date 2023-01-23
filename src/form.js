@@ -90,8 +90,13 @@ function travelForm() {
         }
         legendContainer();
 
+        function inputs(){
+            const inputs = form.appendChild(document.createElement("div"));
+            inputs.setAttribute("class", "inputs");
+
+
         function nameInputContainer() {
-          const nameInputContainer = form.appendChild(
+          const nameInputContainer = inputs.appendChild(
             document.createElement("fieldset")
           );
           nameInputContainer.setAttribute("class", "name inputs-container");
@@ -161,7 +166,7 @@ function travelForm() {
         nameInputContainer();
 
         function contactInputContainer() {
-          const contactInputContainer = form.appendChild(
+          const contactInputContainer = inputs.appendChild(
             document.createElement("fieldset")
           );
           contactInputContainer.setAttribute("class", "contact inputs-container");
@@ -228,7 +233,9 @@ function travelForm() {
         contactInputContainer();
 
         function passwordInputContainer() {
-            const passwordInputContainer = form.appendChild(document.createElement("fieldset"));
+            const passwordInputContainer = inputs.appendChild(
+              document.createElement("fieldset")
+            );
             passwordInputContainer.setAttribute("class", "passwords inputs-container");
 
             function passwordContainer(){
@@ -273,14 +280,16 @@ function travelForm() {
 
         }; passwordInputContainer()
 
+    }; inputs()
+
         function submitContainer() {
-            const submitContainer = form.appendChild(document.createElement("div"));
+            const submitContainer = form.appendChild(document.createElement("fieldset"));
             submitContainer.setAttribute("class", "submit-container");
         
             function submitButton(){
                 const submit = submitContainer.appendChild(document.createElement("input"));
                 submit.setAttribute("class", "submit-button");
-                submit.setAttribute("name", "submit")
+                submit.setAttribute("value", "Create Account")
                 submit.setAttribute("type", "submit")
             }; submitButton()
 
