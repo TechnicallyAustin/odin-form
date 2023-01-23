@@ -31,8 +31,11 @@ function techForms() {
 
   const text = textDiv.appendChild(document.createElement("p"));
   text.setAttribute("class", "hero-text")
+  text.textContent =
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
   const subText = textDiv.appendChild(document.createElement("p"));
   subText.setAttribute("class", "hero-sub-text")
+  subText.textContent = "Brapp Brapp"
 
   // middle
   const middle = right.appendChild(document.createElement("div"));
