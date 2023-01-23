@@ -57,9 +57,9 @@ function travelForm(){
                         legend.setAttribute("class","legend")
 
                         function legendText(){
-                        const legendText = legend.appendChild(document.createElement("h3"))
-                        legendText.setAttribute("class", "legend-text")
-                        legendText.textContent = " Lets get started!"
+                            const legendText = legend.appendChild(document.createElement("h3"))
+                            legendText.setAttribute("class", "legend-text")
+                            legendText.textContent = " Lets get started!"
 
                         }; legendText()
 
@@ -67,14 +67,62 @@ function travelForm(){
 
                 }; legendContainer()
 
-                function nameContainer(){}
+                function nameInputContainer(){
+                    const nameInputContainer = form.appendChild(document.createElement("div"));
+                    nameInputContainer.setAttribute("class", "inputs-container");
+
+                    function firstNameContainer(){
+                        const firstNameContainer = nameInputContainer.appendChild(document.createElement("div"));
+                        firstNameContainer.setAttribute("class", "first-name");
+
+                        function firstName(){
+                            function label(){
+                                const label = firstNameContainer.appendChild(document.createElement("label"));
+                                label.setAttribute("for", "first-name");
+                                label.setAttribute("class", "input-label");
+                                label.textContent = "First Name"
+                            }; label()
+
+                            function name(){
+                                const name = firstNameContainer.appendChild(document.createElement("input"));
+                                name.setAttribute("type", "text");
+                                name.setAttribute("class", "form-input");
+                                name.setAttribute("placeholder", "Clark")
+                            }; name()
+                        }; firstName()
+
+                    };firstNameContainer()
+
+                    function lastNameContainer(){
+                        const lastNameContainer = nameInputContainer.appendChild(document.createElement("div"));
+                        lastNameContainer.setAttribute("class", "last-name");
+
+                        function lastName(){
+                            function label(){
+                                const label = lastNameContainer.appendChild(document.createElement("label"));
+                                label.setAttribute("for", "last-name");
+                                label.setAttribute("class", "input-label");
+                                label.textContent = "Last Name"
+                            }; label()
+
+                            function name(){
+                                const name = lastNameContainer.appendChild(document.createElement("input"));
+                                name.setAttribute("type", "text");
+                                name.setAttribute("class", "form-input");
+                                name.setAttribute("placeholder", "Kent")
+                            }; name()
+                        }; lastName()
+
+
+                    };lastNameContainer()
+                }; nameInputContainer()
 
                 function contactContainer(){}
 
                 function passwordContainer(){}
 
                 function submitContainer(){}
-                
+
             }; form()
         }; formContainer()
 
