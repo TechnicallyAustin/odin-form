@@ -1,113 +1,218 @@
 :root {
-    --hero-width: 50vw;
-    --hero-height: 70vh;
-    --techForms-height: 100vh;
-    --techForms-width: 100vw;
-    --forms-width: 50vw
+    --travel-form-height: 100vh;
+    --travel-form-width: 100vw;
+
+    --hero-height: 100vh;
+    --hero-width: 45vw;
+
+    --main-height: var(--hero-height);
+    --main-width: calc(100vw - var(--hero-width));
+
+    --logo-height: 12vh;
+    --logo-width: var(--hero-width);
+
+    --logo-image-height: 10vh;
+
+    --main-container-height: 20vh;
+    --main-container-width: 100vw;
+
+    --form-container-height: 55vh;
+    --form-container-width: 100vw;
+
+    --form-input-width: 20vw;;
 }
 
-* {
-    box-sizing: border-box;
-    border: 1px solid black;
+*{
+    margin-top: 0;
+    margin-left: 0;
+
 }
 
 
-.tech-forms {
+
+body{
+    background-color: black;
+}
+
+
+.travel-form {
+    height: var(--travel-form-height);
+    width: var(--travel-form-width);
     display: flex;
-    height: 100vh;
-    width: 100vw;
-    justify-content: center;
-    align-items: center;
+
+
 }
 
 .hero {
-    background-image: url(../assets/motorcycle.jpeg);
-    background-position: center;
-    background-size: cover;
-    width: var(--hero-width);
     height: var(--hero-height);
-}
-
-.logo-div {
-    height: 8vh;
     width: var(--hero-width);
-    background-color: rgba(0, 0, 0, .5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 28vh;
+
+    background-image: url(/assets/nyc.jpeg);
+    background-size: cover;
+
+
+
+
 
 }
-
-
 
 .logo {
-    height: calc(var(--hero-height) / 10);
+    height: var(--logo-height);
+    width: var(--logo-width);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+
+    position: relative;
+    top: 22vh;
+
+
+    background-color: rgba(0, 0, 0, .7);
+
+}
+
+.logo-image {
+    height: var(--logo-image-height);
     width: auto;
-    padding: 3%;
 }
 
-.right {
-    height: var(--hero-height);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+.logo-text {
+    color: white;
+    font-size: 38px;
+    font-family: 'Courier New', Courier, monospace;
+    color: lightgreen;
 }
 
-.middle {
-    display: flex;
-}
 
-.moto-form {
-    height: 30vh;
-    width: var(--forms-width);
+.main-section {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
-    gap: 6%;
-}
-
-.legend-div{
-    height: 4vh;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    justify-content: flex-end;
+    background-color: black;
+    gap: 5%;
     padding-left: 2%;
+
 }
 
-fieldset {
-    height: 6vh;
-    width: 50vw;
-    gap: 15%;
+.main-container {
+    height: var(--main-container-height);
+    width: var(--main-container-width);
+    background-color: black;
     display: flex;
+    flex-direction: column;
 }
 
-.form-inputs {
-    height: 4vh;
-    width: 18vw;
+.main-container h2 {
+    color: white;
+    font-size: 28px;
+}
+
+.main-container p {
+    color: white;
+    font-size:  22px;;
+}
+
+
+.form-container {
+    height: var(--form-container-height);
+    width: var(--form-container-width);
+
+}
+
+.form {
+    background-color: black;
+    color: white;
+    height: var(--form-container-height);
+    width: var(--form-container-width);
+    display: flex;
+    flex-direction: column;
+    gap: 3%;
+}
+
+.legend-container {
+    background-color: black;
+    border-top: 1px solid white;
+    display: flex;
+    align-items: center;
+}
+
+.legend {
+    width: var(--form-input-width);
+    padding-top: 2%;
+}
+
+.legend-text {
+    margin-left: 1vw;
+    font-size: 20px;
+    color: lightgreen;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    column-gap: 4%;
+
+    border-bottom: 2px solid white;
+    padding-bottom: 4%;
+}
+
+fieldset{
+    border: none;
+
+}
+
+
+.inputs-container {
+    background-color: black;
+    width: 40%;
+
+    display: flex;
+    flex-direction: row;
+    gap: 8%;
+
+}
+
+.input-label {
+    font-size: 18px;
+    color: lightgreen;
+}
+
+.form-input {
+    width: var(--form-input-width);
+    height: 2vh;
+    padding: 3%;
+
+
+}
+
+.first-name,
+.last-name,
+.email,
+.phone,
+.password,
+.confirm-password {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.submit-container{
+    width: var(--form-input-width);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    gap: 4%;
-}
-
-.submit-div{
-    position: fixed;
-    top: 68vh;
-    left: 52vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
     align-items: center;
-    width: 20vw;
+    background-color: black;
+    padding-top: 1%;
+    border: none;
 }
 
-button{
-    width: 16vw;
-    height: 3vh;
-    border-radius: 5px;
+.submit-button{
+    height: 5vh;
+    width: var(--form-input-width);
+    border-radius: 8px;
+    background-color: lightgreen;
+    font-weight: 600;
 }
