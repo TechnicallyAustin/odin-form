@@ -219,9 +219,55 @@ function travelForm() {
         }
         contactInputContainer();
 
-        function passwordContainer() {}
+        function passwordInputContainer() {
+            const passwordInputContainer = form.appendChild(document.createElement("div"));
+            passwordInputContainer.setAttribute("class", "inputs-container");
 
-        function submitContainer() {}
+            function passwordContainer(){
+                const passwordContainer = passwordInputContainer.appendChild(document.createElement("div"));
+                passwordContainer.setAttribute("class", "password");
+
+                function label(){
+                    const label = passwordContainer.appendChild(document.createElement("label"));
+                    label.setAttribute("for", "password");
+                    label.setAttribute("class", "input-label");
+                    label.textContent = "Password"
+                }; label()
+
+                function password(){
+                    const password = passwordContainer.appendChild(document.createElement("input"));
+                    password.setAttribute("type", "password");
+                    password.setAttribute("class", "form-input");
+                    password.setAttribute("autocomplete", "current-password")
+                }; password()
+            }; passwordContainer()
+
+
+            function confirmContainer(){
+                const confirmContainer = passwordInputContainer.appendChild(document.createElement("div"));
+                confirmContainer.setAttribute("class", "confirm-password");
+
+                function label(){
+                    const label = confirmContainer.appendChild(document.createElement("label"));
+                    label.setAttribute("for", "confirm-password");
+                    label.setAttribute("class", "input-label");
+                    label.textContent = "Confirm Password"
+                }; label()
+
+                function confirm(){
+                    const password = confirmContainer.appendChild(document.createElement("input"));
+                    password.setAttribute("type", "password");
+                    password.setAttribute("class", "form-input");
+                    password.setAttribute("autocomplete", "current-password")
+                }; confirm()
+
+            }; confirmContainer()
+
+        }; passwordInputContainer()
+
+        function submitContainer() {
+
+        }
       }
       form();
     }
