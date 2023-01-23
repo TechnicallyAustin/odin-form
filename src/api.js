@@ -1,159 +1,352 @@
-function techForms() {
-  // create page container
-  const techForms = document.body.appendChild(document.createElement("div"));
-  techForms.setAttribute("class", "tech-forms");
-
-  //create left side container
-  const left = techForms.appendChild(document.createElement("div"));
-  left.setAttribute("class", "hero");
-  // add logo
-  const logoDiv = left.appendChild(document.createElement("div"));
-  logoDiv.setAttribute("class", "logo-div");
-
-  const logoContainer = logoDiv.appendChild(document.createElement("div"))
-  logoContainer.setAttribute("class", "logo-container");
-
-  const logo = logoContainer.appendChild(document.createElement("img"));
-  logo.setAttribute("class", "logo");
-  logo.setAttribute("src", "assets/odin-lined.png");
-
-  // create right side container
-  const right = techForms.appendChild(document.createElement("div"));
-  right.setAttribute("class", "right");
-
-  // top
-  const top = right.appendChild(document.createElement("div"));
-  top.setAttribute("class", "top");
-
-  // add hero caption
-  const textDiv = top.appendChild(document.createElement("div"));
-  textDiv.setAttribute("class", "text");
-
-  const text = textDiv.appendChild(document.createElement("p"));
-  text.setAttribute("class", "hero-text")
-  text.textContent =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
-  const subText = textDiv.appendChild(document.createElement("p"));
-  subText.setAttribute("class", "hero-sub-text")
-  subText.textContent = "Brapp Brapp"
-
-  // middle
-  const middle = right.appendChild(document.createElement("div"));
-  middle.setAttribute("class", "middle");
-
-    // Form
-  const form = middle.appendChild(document.createElement("form"));
-  form.setAttribute("action", "GET");
-  form.setAttribute("class", "moto-form")
-
-  const legendDiv = form.appendChild(document.createElement("div"));
-  legendDiv.setAttribute("class", "legend-div")
-
-  const legend = legendDiv.appendChild(document.createElement("legend"));
-  legend.setAttribute("class", "legend");
-  legend.textContent = "Join the Two-Wheel Revolution"
-
-    // Name Fieldset
+// TO-DO
+  // Validations
+  // input Hover :focus css psuedo-class
+  // password validaiton error display
+  // Give passwords error class
 
 
-  const nameInput = form.appendChild(document.createElement("fieldset"));
-  nameInput.setAttribute("class", "name-field");
+function travelForm() {
+  const travelForm = document.body.appendChild(document.createElement("div"));
+  travelForm.setAttribute("class", "travel-form");
 
-   const firstNameDiv = nameInput.appendChild(document.createElement("div"));
-   firstNameDiv.setAttribute("class", "form-inputs");
+  function hero() {
+    const hero = travelForm.appendChild(document.createElement("div"));
+    hero.setAttribute("class", "hero");
 
-  const firstLabel = firstNameDiv.appendChild(document.createElement("label"));
-  firstLabel.setAttribute("for", "first-name");
-  firstLabel.textContent = "First Name";
+    function logo() {
+      const logo = hero.appendChild(document.createElement("div"));
+      logo.setAttribute("class", "logo");
 
-  const first = firstNameDiv.appendChild(document.createElement("input"));
-  first.setAttribute("type", "text");
-  first.setAttribute("placeholder", "First Name");
-  first.setAttribute("autocomplete", "username")
+      function image() {
+        const image = logo.appendChild(document.createElement("img"));
+        image.setAttribute("class", "logo-image");
+        image.setAttribute("src", "../assets/plane2.svg");
+        image.setAttribute("alt", "Technicity Logo");
+      }
+      image();
 
-  const lastNameDiv = nameInput.appendChild(document.createElement("div"));
-  lastNameDiv.setAttribute("class", "form-inputs");
+      function text() {
+        const text = logo.appendChild(document.createElement("h2"));
+        text.setAttribute("class", "logo-text");
+        text.textContent = "Technicity";
+      }
+      text();
+    }
+    logo();
+  }
+  hero();
 
-  const secondLabel = lastNameDiv.appendChild(document.createElement("label"));
-  secondLabel.setAttribute("for", "first-name");
-  secondLabel.textContent = "Last Name";
+  function main() {
+    const main = travelForm.appendChild(document.createElement("main"));
+    main.setAttribute("class", "main-section");
 
-  const second = lastNameDiv.appendChild(document.createElement("input"));
-  second.setAttribute("type", "text");
-  second.setAttribute("placeholder", "Last Name");
+    function mainTextContainer() {
+      const mainTextContainer = main.appendChild(
+        document.createElement("section")
+      );
+      mainTextContainer.setAttribute("class", "main-container");
+      const mainText = mainTextContainer.appendChild(
+        document.createElement("h2")
+      );
+      mainText.setAttribute("class", "main-text");
+      mainText.textContent =
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
 
-    // Contact Fieldset
-  const contactInput = form.appendChild(document.createElement("fieldset"));
-  contactInput.setAttribute("class", "contact-field");
+      function subText() {
+        const subText = mainTextContainer.appendChild(
+          document.createElement("p")
+        );
+        subText.setAttribute("class", "sub-text");
+        subText.textContent = " Find your City and find your tribe.";
+      }
+      subText();
+    }
+    mainTextContainer();
 
-  const emailDiv = contactInput.appendChild(document.createElement("div"));
-  emailDiv.setAttribute("class", "form-inputs");
+    function formContainer() {
+      const formContainer = main.appendChild(document.createElement("section"));
+      formContainer.setAttribute("class", "form-container");
 
-    // email
-  const emailLabel = emailDiv.appendChild(document.createElement("label"));
-  emailLabel.setAttribute("for", "email");
-  emailLabel.textContent = "Email";
+      function form() {
+        const form = formContainer.appendChild(document.createElement("form"));
+        form.setAttribute("action", "POST");
+        form.setAttribute("class", "form");
 
-  const email = emailDiv.appendChild(document.createElement("input"));
-  email.setAttribute("type", "email");
-  email.setAttribute("placeholder", "name@domain.com");
+        function legendContainer() {
+          const legendContainer = form.appendChild(
+            document.createElement("div")
+          );
+          legendContainer.setAttribute("class", "legend-container");
 
-    // phone
+          function legend() {
+            const legend = legendContainer.appendChild(
+              document.createElement("legend")
+            );
+            legend.setAttribute("class", "legend");
 
-  const phoneDiv = contactInput.appendChild(document.createElement("div"))
-  phoneDiv.setAttribute("class", "form-inputs");
+            function legendText() {
+              const legendText = legend.appendChild(
+                document.createElement("h3")
+              );
+              legendText.setAttribute("class", "legend-text");
+              legendText.textContent = " Lets get started!";
+            }
+            legendText();
+          }
+          legend();
+        }
+        legendContainer();
 
-  const phoneLabel = phoneDiv.appendChild(document.createElement("label"));
-  phoneLabel.setAttribute("for", "phone-number");
-  phoneLabel.textContent = "Phone Number";
+        function inputs() {
+          const inputs = form.appendChild(document.createElement("div"));
+          inputs.setAttribute("class", "inputs");
 
-  const phone = phoneDiv.appendChild(document.createElement("input"));
-  phone.setAttribute("type", "text");
-  phone.setAttribute("placeholder", "(123)-456-7890");
-
-    // Password fieldset
-    const passwordInput = form.appendChild(document.createElement("fieldset"));
-    passwordInput.setAttribute("class", "password-field");
-
-    const passwordDiv = passwordInput.appendChild(document.createElement("div"));
-    passwordDiv.setAttribute("class", "form-inputs");
-
-    const passwordLabel = passwordDiv.appendChild(document.createElement("label"));
-    passwordLabel.setAttribute("for", "password");
-    passwordLabel.textContent = "Password";
-
-    const password = passwordDiv.appendChild(document.createElement("input"));
-    password.setAttribute("type", "password");
-    password.setAttribute("autocomplete", "current-password");
-
-    const confrimDiv = passwordInput.appendChild(document.createElement("div"))
-    confrimDiv.setAttribute("class", "form-inputs");
-
-    const confirmLabel = confrimDiv.appendChild(document.createElement("label"));
-    confirmLabel.setAttribute("for", "confirm-password");
-    confirmLabel.textContent = "Confirm Password";
-
-    const confirm = confrimDiv.appendChild(document.createElement("input"));
-    confirm.setAttribute("type", "text");
-    confirm.setAttribute("autocomplete", "current-password");
-
-    const submitDiv = form.appendChild(document.createElement("div"));
-    submitDiv.setAttribute("class", "submit-div");
-
-    const submit =  submitDiv.appendChild(document.createElement("button"));
-    submit.setAttribute("value", "submit")
-    submit.textContent = "Create Account"
-
-    const login = submitDiv.appendChild(document.createElement("p"));
-    login.setAttribute("class", "login")
-    login.textContent = "Already have an account? Login"
-    
+          function nameInputContainer() {
+            const nameInputContainer = inputs.appendChild(
+              document.createElement("fieldset")
+            );
+            nameInputContainer.setAttribute("class", "name inputs-container");
 
 
+            function firstNameContainer() {
+              const firstNameContainer = nameInputContainer.appendChild(
+                document.createElement("div")
+              );
+              firstNameContainer.setAttribute("class", "first-name");
 
+              function firstName() {
+                function label() {
+                  const label = firstNameContainer.appendChild(
+                    document.createElement("label")
+                  );
+                  label.setAttribute("for", "first-name");
+                  label.setAttribute("class", "input-label");
+                  label.textContent = "First Name";
+                }
+                label();
 
+                function name() {
+                  const name = firstNameContainer.appendChild(
+                    document.createElement("input")
+                  );
+                  name.setAttribute("type", "text");
+                  name.setAttribute("class", "form-input");
+                  name.setAttribute("placeholder", "Clark");
+                  //validations
+                }
+                name();
+              }
+              firstName();
+            }
+            firstNameContainer();
 
-  // submit
-  // login
-}
-techForms();
+            function lastNameContainer() {
+              const lastNameContainer = nameInputContainer.appendChild(
+                document.createElement("div")
+              );
+              lastNameContainer.setAttribute("class", "last-name");
+
+              function lastName() {
+                function label() {
+                  const label = lastNameContainer.appendChild(
+                    document.createElement("label")
+                  );
+                  label.setAttribute("for", "last-name");
+                  label.setAttribute("class", "input-label");
+                  label.textContent = "Last Name";
+                }
+                label();
+
+                function name() {
+                  const name = lastNameContainer.appendChild(
+                    document.createElement("input")
+                  );
+                  name.setAttribute("type", "text");
+                  name.setAttribute("class", "form-input");
+                  name.setAttribute("placeholder", "Kent");
+                  // validations
+                }
+                name();
+              }
+              lastName();
+            }
+            lastNameContainer();
+          }
+          nameInputContainer();
+
+          function contactInputContainer() {
+            const contactInputContainer = inputs.appendChild(
+              document.createElement("fieldset")
+            );
+            contactInputContainer.setAttribute(
+              "class",
+              "contact inputs-container"
+            );
+
+            function emailContainer() {
+              const emailContainer = contactInputContainer.appendChild(
+                document.createElement("div")
+              );
+              emailContainer.setAttribute("class", "email");
+
+              function label() {
+                const label = emailContainer.appendChild(
+                  document.createElement("label")
+                );
+                label.setAttribute("for", "email inputs-container");
+                label.setAttribute("class", "input-label");
+                label.textContent = "Email";
+              }
+              label();
+
+              function email() {
+                const email = emailContainer.appendChild(
+                  document.createElement("input")
+                );
+                email.setAttribute("class", "form-input");
+                email.setAttribute("placeholder", "ClarkKent@gmail.com");
+                email.setAttribute("type", "email");
+                // validations
+              }
+              email();
+            }
+            emailContainer();
+
+            function phoneContainer() {
+              const phoneContainer = contactInputContainer.appendChild(
+                document.createElement("div")
+              );
+              phoneContainer.setAttribute("class", "phone");
+
+              function label() {
+                const label = phoneContainer.appendChild(
+                  document.createElement("label")
+                );
+                label.setAttribute("for", "phone");
+                label.setAttribute("class", "input-label");
+                label.textContent = "Phone";
+              }
+              label();
+
+              function phone() {
+                const phone = phoneContainer.appendChild(
+                  document.createElement("input")
+                );
+                phone.setAttribute("type", "phone");
+                phone.setAttribute("class", "form-input");
+                phone.setAttribute("placeholder", "1234567890");
+                // validations
+              }
+              phone();
+            }
+            phoneContainer();
+          }
+          contactInputContainer();
+
+          function passwordInputContainer() {
+            const passwordInputContainer = inputs.appendChild(
+              document.createElement("fieldset")
+            );
+            passwordInputContainer.setAttribute(
+              "class",
+              "passwords inputs-container"
+            );
+
+            function passwordContainer() {
+              const passwordContainer = passwordInputContainer.appendChild(
+                document.createElement("div")
+              );
+              passwordContainer.setAttribute("class", "password");
+
+              function label() {
+                const label = passwordContainer.appendChild(
+                  document.createElement("label")
+                );
+                label.setAttribute("for", "password");
+                label.setAttribute("class", "input-label");
+                label.textContent = "Password";
+              }
+              label();
+
+              function password() {
+                const password = passwordContainer.appendChild(
+                  document.createElement("input")
+                );
+                password.setAttribute("type", "password");
+                password.setAttribute("class", "error form-input");
+                password.setAttribute("autocomplete", "current-password");
+                // validations
+              }
+              password();
+            }
+            passwordContainer();
+
+            function confirmContainer() {
+              const confirmContainer = passwordInputContainer.appendChild(
+                document.createElement("div")
+              );
+              confirmContainer.setAttribute("class", "confirm-password");
+
+              function label() {
+                const label = confirmContainer.appendChild(
+                  document.createElement("label")
+                );
+                label.setAttribute("for", "confirm-password");
+                label.setAttribute("class", "input-label");
+                label.textContent = "Confirm Password";
+              }
+              label();
+
+              function confirm() {
+                const password = confirmContainer.appendChild(
+                  document.createElement("input")
+                );
+                password.setAttribute("type", "password");
+                password.setAttribute("class", "error form-input");
+                password.setAttribute("autocomplete", "current-password");
+                // validations
+              }
+              confirm();
+            }
+            confirmContainer();
+          }
+          passwordInputContainer();
+        }
+        inputs();
+
+        function submitContainer() {
+          const submitContainer = form.appendChild(
+            document.createElement("fieldset")
+          );
+          submitContainer.setAttribute("class", "submit-container");
+
+          function submitButton() {
+            const submit = submitContainer.appendChild(
+              document.createElement("input")
+            );
+            submit.setAttribute("class", "submit-button");
+            submit.setAttribute("value", "Create Account");
+            submit.setAttribute("type", "submit");
+          }
+          submitButton();
+
+          function loginLink() {
+            const login = submitContainer.appendChild(
+              document.createElement("p")
+            );
+            login.setAttribute("class", "login");
+            login.textContent = "Already have an account?"
+            const link = " Log in"
+            login.textContent += link
+          };
+          loginLink()
+        };
+        submitContainer()
+      };
+      form()
+    };
+    formContainer()
+  };
+  main()
+};
+travelForm()

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
+
 :root {
     --travel-form-height: 100vh;
     --travel-form-width: 100vw;
@@ -13,16 +15,17 @@
 
     --logo-image-height: 10vh;
 
-    --main-container-height: 20vh;
-    --main-container-width: 100vw;
+    --main-container-height: 35vh;
+    --main-container-width: 80vw;
 
     --form-container-height: 55vh;
     --form-container-width: 100vw;
 
-    --form-input-width: 20vw;;
+    --form-input-width: 18vw;
+    ;
 }
 
-*{
+* {
     margin-top: 0;
     margin-left: 0;
 
@@ -30,7 +33,7 @@
 
 
 
-body{
+body {
     background-color: black;
 }
 
@@ -69,7 +72,7 @@ body{
     top: 22vh;
 
 
-    background-color: rgba(0, 0, 0, .7);
+    background-color: rgba(0, 0, 0, .4);
 
 }
 
@@ -80,28 +83,35 @@ body{
 
 .logo-text {
     color: white;
-    font-size: 38px;
-    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    margin-bottom: 0;
+    font-family: 'Source Code Pro', monospace, 'Courier New', Courier;
     color: lightgreen;
+
 }
 
 
 .main-section {
+    height: 100vh;
+    width: 55vw;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     background-color: black;
-    gap: 5%;
+    gap: 3%;
     padding-left: 2%;
+    padding-right: 2%;
 
 }
 
 .main-container {
     height: var(--main-container-height);
-    width: var(--main-container-width);
+    width: 85vh;
     background-color: black;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
 }
 
 .main-container h2 {
@@ -111,7 +121,8 @@ body{
 
 .main-container p {
     color: white;
-    font-size:  22px;;
+    font-size: 22px;
+    ;
 }
 
 
@@ -149,7 +160,7 @@ body{
     color: lightgreen;
 }
 
-.inputs{
+.inputs {
     display: flex;
     flex-direction: column;
     column-gap: 4%;
@@ -158,7 +169,7 @@ body{
     padding-bottom: 4%;
 }
 
-fieldset{
+fieldset {
     border: none;
 
 }
@@ -183,8 +194,10 @@ fieldset{
     width: var(--form-input-width);
     height: 2vh;
     padding: 3%;
+}
 
-
+input:hover {
+    border: 3px solid lightblue;
 }
 
 .first-name,
@@ -195,10 +208,10 @@ fieldset{
 .confirm-password {
     display: flex;
     flex-direction: column;
-    
+
 }
 
-.submit-container{
+.submit-container {
     width: var(--form-input-width);
     display: flex;
     flex-direction: column;
@@ -207,12 +220,20 @@ fieldset{
     background-color: black;
     padding-top: 1%;
     border: none;
+
 }
 
-.submit-button{
+.submit-button {
     height: 5vh;
     width: var(--form-input-width);
     border-radius: 8px;
     background-color: lightgreen;
     font-weight: 600;
+    padding-bottom: 2%;
 }
+
+.login{
+    padding-top: 2%;
+    margin-bottom: 0;
+}
+
