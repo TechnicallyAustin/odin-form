@@ -13,10 +13,17 @@ function travelForm() {
       function image() {
         const image = logo.appendChild(document.createElement("img"));
         image.setAttribute("class", "logo-image");
-        image.setAttribute("src", "");
+        image.setAttribute("src", "../assets/odin-lined.png");
         image.setAttribute("alt", "The Odin project logo");
       }
       image();
+
+      function text() {
+        const text = logo.appendChild(document.createElement("h2"));
+        text.setAttribute("class", "logo-text")
+        text.textContent = "Technicity"
+      };
+      text()
     }
     logo();
   }
@@ -30,6 +37,7 @@ function travelForm() {
       const mainTextContainer = main.appendChild(
         document.createElement("section")
       );
+      mainTextContainer.setAttribute("class", "main-container");
       const mainText = mainTextContainer.appendChild(
         document.createElement("h2")
       );
@@ -84,7 +92,7 @@ function travelForm() {
 
         function nameInputContainer() {
           const nameInputContainer = form.appendChild(
-            document.createElement("div")
+            document.createElement("fieldset")
           );
           nameInputContainer.setAttribute("class", "inputs-container");
 
@@ -154,7 +162,7 @@ function travelForm() {
 
         function contactInputContainer() {
           const contactInputContainer = form.appendChild(
-            document.createElement("div")
+            document.createElement("fieldset")
           );
           contactInputContainer.setAttribute("class", "inputs-container");
 
@@ -220,7 +228,7 @@ function travelForm() {
         contactInputContainer();
 
         function passwordInputContainer() {
-            const passwordInputContainer = form.appendChild(document.createElement("div"));
+            const passwordInputContainer = form.appendChild(document.createElement("fieldset"));
             passwordInputContainer.setAttribute("class", "inputs-container");
 
             function passwordContainer(){
@@ -266,8 +274,23 @@ function travelForm() {
         }; passwordInputContainer()
 
         function submitContainer() {
+            const submitContainer = form.appendChild(document.createElement("div"));
+            submitContainer.setAttribute("class", "submit-container");
+        
+            function submitButton(){
+                const submit = submitContainer.appendChild(document.createElement("input"));
+                submit.setAttribute("class", "submit-button");
+                submit.setAttribute("name", "submit")
+                submit.setAttribute("type", "submit")
+            }; submitButton()
 
-        }
+            function loginLink(){
+                const login = submitContainer.appendChild(document.createElement("p"));
+                login.setAttribute("class", "login");
+                login.textContent = "Already have an account? Log in"
+            }; loginLink()
+
+        }; submitContainer()
       }
       form();
     }
