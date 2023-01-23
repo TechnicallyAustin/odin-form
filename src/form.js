@@ -39,22 +39,44 @@ function travelForm(){
 
         }; mainTextContainer()
 
-        function form(){
+        function formContainer(){
+            const formContainer = main.appendChild(document.createElement("section"));
+            formContainer.setAttribute("class", "form-container")
 
-            function legend(){
+            function form(){
+                const form = formContainer.appendChild(document.createElement("form"))
+                form.setAttribute("action", "POST");
+                form.setAttribute("class", "form")
 
-                function legendText(){}
-            }
+                function legendContainer(){
+                    const legendContainer = form.appendChild(document.createElement("div"));
+                    legendContainer.setAttribute("class", "legend-container");
 
-            function name(){}
+                    function legend(){
+                        const legend = legendContainer.appendChild(document.createElement("legend"));
+                        legend.setAttribute("class","legend")
 
-            function contact(){}
+                        function legendText(){
+                        const legendText = legend.appendChild(document.createElement("h3"))
+                        legendText.setAttribute("class", "legend-text")
+                        legendText.textContent = " Lets get started!"
 
-            function password(){}
+                        }; legendText()
 
-            function submit(){}
-        }
+                    }; legend()
 
+                }; legendContainer()
+
+                function nameContainer(){}
+
+                function contactContainer(){}
+
+                function passwordContainer(){}
+
+                function submitContainer(){}
+                
+            }; form()
+        }; formContainer()
 
     }; main()
 
