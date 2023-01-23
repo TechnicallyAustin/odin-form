@@ -94,7 +94,7 @@ function travelForm() {
           const nameInputContainer = form.appendChild(
             document.createElement("fieldset")
           );
-          nameInputContainer.setAttribute("class", "inputs-container");
+          nameInputContainer.setAttribute("class", "name inputs-container");
 
           function firstNameContainer() {
             const firstNameContainer = nameInputContainer.appendChild(
@@ -164,7 +164,7 @@ function travelForm() {
           const contactInputContainer = form.appendChild(
             document.createElement("fieldset")
           );
-          contactInputContainer.setAttribute("class", "inputs-container");
+          contactInputContainer.setAttribute("class", "contact inputs-container");
 
           function emailContainer() {
             const emailContainer = contactInputContainer.appendChild(
@@ -176,7 +176,7 @@ function travelForm() {
               const label = emailContainer.appendChild(
                 document.createElement("label")
               );
-              label.setAttribute("for", "email");
+              label.setAttribute("for", "email inputs-container");
               label.setAttribute("class", "input-label");
               label.textContent = "Email";
             }
@@ -198,7 +198,7 @@ function travelForm() {
             const phoneContainer = contactInputContainer.appendChild(
               document.createElement("div")
             );
-            phoneContainer.setAttribute("class", "inputs-container");
+            phoneContainer.setAttribute("class", "phone");
 
 
               function label() {
@@ -229,7 +229,7 @@ function travelForm() {
 
         function passwordInputContainer() {
             const passwordInputContainer = form.appendChild(document.createElement("fieldset"));
-            passwordInputContainer.setAttribute("class", "inputs-container");
+            passwordInputContainer.setAttribute("class", "passwords inputs-container");
 
             function passwordContainer(){
                 const passwordContainer = passwordInputContainer.appendChild(document.createElement("div"));
