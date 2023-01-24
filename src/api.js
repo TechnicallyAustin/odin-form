@@ -1,10 +1,3 @@
-// TO-DO
-  // Validations
-  // input Hover :focus css psuedo-class
-  // password validaiton error display
-  // Give passwords error class
-
-
 function travelForm() {
   const travelForm = document.body.appendChild(document.createElement("div"));
   travelForm.setAttribute("class", "travel-form");
@@ -107,7 +100,6 @@ function travelForm() {
             );
             nameInputContainer.setAttribute("class", "name inputs-container");
 
-
             function firstNameContainer() {
               const firstNameContainer = nameInputContainer.appendChild(
                 document.createElement("div")
@@ -132,10 +124,9 @@ function travelForm() {
                   name.setAttribute("type", "text");
                   name.setAttribute("class", "form-input");
                   name.setAttribute("placeholder", "Clark");
-                  name.setAttribute("maxlength", "25")
-                  name.setAttribute("minlength", "2")
-                  name.required = true
-                  //validations
+                  name.setAttribute("maxlength", "25");
+                  name.setAttribute("minlength", "2");
+                  name.required = true;
                 }
                 name();
               }
@@ -170,7 +161,6 @@ function travelForm() {
                   name.setAttribute("maxlength", "25");
                   name.setAttribute("minlength", "2");
                   name.required = true;
-                  // validations
                 }
                 name();
               }
@@ -212,11 +202,10 @@ function travelForm() {
                 email.setAttribute("class", "form-input");
                 email.setAttribute("placeholder", "ClarkKent@gmail.com");
                 email.setAttribute("type", "email");
-                email.setAttribute("minlength", "12")
-                email.setAttribute("maxlength", "30")
-                email.setAttribute("pattern", ".+@.+..+");        
-                email.required = true
-                // validations
+                email.setAttribute("minlength", "12");
+                email.setAttribute("maxlength", "30");
+                email.setAttribute("pattern", ".+@.+..+");
+                email.required = true;
               }
               email();
             }
@@ -245,9 +234,8 @@ function travelForm() {
                 phone.setAttribute("type", "phone");
                 phone.setAttribute("class", "form-input");
                 phone.setAttribute("placeholder", "1234567890");
-                phone.setAttribute("minlength", "10")
-                phone.setAttribute("maxlength", "10")
-                // validations
+                phone.setAttribute("minlength", "10");
+                phone.setAttribute("maxlength", "10");
               }
               phone();
             }
@@ -287,8 +275,7 @@ function travelForm() {
                 password.setAttribute("type", "password");
                 password.setAttribute("class", "pass form-input");
                 password.setAttribute("autocomplete", "current-password");
-                password.required = true
-                // validations
+                password.required = true;
               }
               password();
             }
@@ -317,8 +304,7 @@ function travelForm() {
                 password.setAttribute("type", "password");
                 password.setAttribute("class", "conf form-input");
                 password.setAttribute("autocomplete", "current-password");
-                password.required = true
-                // validations
+                password.required = true;
               }
               confirm();
             }
@@ -349,18 +335,18 @@ function travelForm() {
               document.createElement("p")
             );
             login.setAttribute("class", "login");
-            login.textContent = "Already have an account?"
-            const link = " Log in"
-            login.textContent += link
-          };
-          loginLink()
-        };
-        submitContainer()
-      };
-      form()
-    };
-    formContainer()
-  };
-  main()
-};
-travelForm()
+            login.textContent = "Already have an account?";
+            const link = " Log in";
+            login.textContent += link;
+          }
+          loginLink();
+        }
+        submitContainer();
+      }
+      form();
+    }
+    formContainer();
+  }
+  main();
+}
+travelForm();
