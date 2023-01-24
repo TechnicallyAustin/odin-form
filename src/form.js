@@ -1,20 +1,32 @@
-function form(){
+function validate(){
+       const form = document.querySelector("form");
+       const password = document.querySelector(".pass");
+       const passwordContainer = document.querySelector(".password")
+       const confirm = document.querySelector(".conf");
+       
 
-    function name(){
-        function firstName(){}
-        function lastName(){}
-    }
 
-    function contact(){
-        function email(){}
-        function phone(){}
-    }
 
-    function password(){
-        function password(){
-        }
-        function confirmation(){}
-    }
+       form.addEventListener("submit", ()=> {
+           if (password.value === confirm.value){
+               console.log("match")
+            } else {
+                console.log("no Match")
+                password.setAttribute("class", "pass form-input error");
+                confirm.setAttribute("class", "conf form-input error");
 
-    function submit(){}
-}
+                const error = passwordContainer.appendChild(document.createElement("p"));
+                error.setAttribute("class", "error-message");
+                error.textContent = "* Passwords do not match"
+
+
+
+            }
+        })
+
+       
+
+       
+
+
+}; validate()

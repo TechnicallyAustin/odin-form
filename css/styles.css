@@ -220,7 +220,14 @@ input:hover {
     background-color: black;
     padding-top: 1%;
     border: none;
+}
 
+.error{
+    border: 1px solid red;;
+}
+
+.error-message{
+    color: red;
 }
 
 .submit-button {
