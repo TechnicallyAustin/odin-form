@@ -69,7 +69,7 @@ function travelForm() {
 
       function form() {
         const form = formContainer.appendChild(document.createElement("form"));
-        form.setAttribute("action", "POST");
+        form.setAttribute("action", "#");
         form.setAttribute("class", "form");
 
         function legendContainer() {
@@ -132,6 +132,9 @@ function travelForm() {
                   name.setAttribute("type", "text");
                   name.setAttribute("class", "form-input");
                   name.setAttribute("placeholder", "Clark");
+                  name.setAttribute("maxlength", "25")
+                  name.setAttribute("minlength", "2")
+                  name.required = true
                   //validations
                 }
                 name();
@@ -164,6 +167,9 @@ function travelForm() {
                   name.setAttribute("type", "text");
                   name.setAttribute("class", "form-input");
                   name.setAttribute("placeholder", "Kent");
+                  name.setAttribute("maxlength", "25");
+                  name.setAttribute("minlength", "2");
+                  name.required = true;
                   // validations
                 }
                 name();
@@ -206,6 +212,12 @@ function travelForm() {
                 email.setAttribute("class", "form-input");
                 email.setAttribute("placeholder", "ClarkKent@gmail.com");
                 email.setAttribute("type", "email");
+                email.setAttribute("minlength", "12")
+                email.setAttribute("maxlength", "30")
+                email.setAttribute("pattern", "([-!#-'*+/-9=?A-Z^-~]+(\.[-!#-'*+/-9=?A-Z^-~]+)*|" +
+                "([]!#-[^-~ \t]|(\\[\t -~]))+" +
+                ")@([0-9A-Za-z]([0-9A-Za-z-]{0,61}[0-9A-Za-z])?(\.[0-9A-Za-z]([0-9A-Za-z-]{0,61}[0-9A-Za-z])?)*|\[((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])(\.(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])){3}|IPv6:((((0|[1-9A-Fa-f][0-9A-Fa-f]{0,3}):){6}|::((0|[1-9A-Fa-f][0-9A-Fa-f]{0,3}):){5}|[0-9A-Fa-f]{0,4}::((0|[1-9A-Fa-f][0-9A-Fa-f]{0,3}):){4}|(((0|[1-9A-Fa-f][0-9A-Fa-f]{0,3}):)?(0|[1-9A-Fa-f][0-9A-Fa-f]{0,3}))?::((0|[1-9A-Fa-f][0-9A-Fa-f]{0,3}):){3}|(((0|[1-9A-Fa-f][0-9A-Fa-f]{0,3}):){0,2}(0|[1-9A-Fa-f][0-9A-Fa-f]{0,3}))?::((0|[1-9A-Fa-f][0-9A-Fa-f]{0,3}):){2}|(((0|[1-9A-Fa-f][0-9A-Fa-f]{0,3}):){0,3}(0|[1-9A-Fa-f][0-9A-Fa-f]{0,3}))?::(0|[1-9A-Fa-f][0-9A-Fa-f]{0,3}):|(((0|[1-9A-Fa-f][0-9A-Fa-f]{0,3}):){0,4}(0|[1-9A-Fa-f][0-9A-Fa-f]{0,3}))?::)((0|[1-9A-Fa-f][0-9A-Fa-f]{0,3}):(0|[1-9A-Fa-f][0-9A-Fa-f]{0,3})|(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])(\.(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])){3})|(((0|[1-9A-Fa-f][0-9A-Fa-f]{0,3}):){0,5}(0|[1-9A-Fa-f][0-9A-Fa-f]{0,3}))?::(0|[1-9A-Fa-f][0-9A-Fa-f]{0,3})|(((0|[1-9A-Fa-f][0-9A-Fa-f]{0,3}):){0,6}(0|[1-9A-Fa-f][0-9A-Fa-f]{0,3}))?::)|(?!IPv6:)[0-9A-Za-z-]*[0-9A-Za-z]:[!-Z^-~]+)])");
+                email.required = true
                 // validations
               }
               email();
@@ -235,6 +247,8 @@ function travelForm() {
                 phone.setAttribute("type", "phone");
                 phone.setAttribute("class", "form-input");
                 phone.setAttribute("placeholder", "1234567890");
+                phone.setAttribute("minlength", "10")
+                phone.setAttribute("maxlength", "10")
                 // validations
               }
               phone();
@@ -275,6 +289,7 @@ function travelForm() {
                 password.setAttribute("type", "password");
                 password.setAttribute("class", "error form-input");
                 password.setAttribute("autocomplete", "current-password");
+                password.required = true
                 // validations
               }
               password();
@@ -304,6 +319,7 @@ function travelForm() {
                 password.setAttribute("type", "password");
                 password.setAttribute("class", "error form-input");
                 password.setAttribute("autocomplete", "current-password");
+                password.required = true
                 // validations
               }
               confirm();
